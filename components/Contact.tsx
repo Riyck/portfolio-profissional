@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-16">
           <p className="mb-3 font-mono text-sm uppercase tracking-[0.3em] text-green-400">
-            // contato
+            {"// contato"}
           </p>
 
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl">

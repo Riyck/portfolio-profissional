@@ -2,6 +2,7 @@ export interface Project {
   id: number;
   title: string;
   description: string;
+  highlights?: string[];
   technologies: string[];
   category: string;
   status: "completed" | "in-development" | "learning";
@@ -12,6 +13,80 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "AI Fitness",
+    description:
+      "App de treino com Coach de IA para alunos, personais e academias. Monta treinos sob medida, adapta os exercícios a lesões, acompanha cansaço e evolução e conversa com o aluno por voz. É a base do meu TCC.",
+    highlights: [
+      "Perfis e permissões separados para aluno, personal, instrutor e admin",
+      "Coach de IA com voz, limites de uso e respostas de reserva quando a IA não está disponível",
+      "Backend em Supabase Edge Functions, sem servidor próprio",
+      "Mais de 48 versões publicadas, com changelog e testes automatizados",
+    ],
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Node.js",
+      "OpenAI API",
+    ],
+    category: "Mobile / AI",
+    status: "in-development",
+    demo: "https://ai-fitness.expo.app",
+  },
+
+  {
+    id: 2,
+    title: "Infotech Analyser",
+    description:
+      "Ferramenta de diagnóstico remoto de conexão. O técnico gera um link, o cliente abre no celular, o teste roda no navegador e o painel mostra o veredito, os problemas encontrados e um relatório pronto para o chamado.",
+    highlights: [
+      "Teste de velocidade e latência direto no navegador do cliente",
+      "Identificação da rede do cliente por ASN (GeoIP)",
+      "Login de técnicos com auditoria e bloqueio por tentativas",
+      "Deploy com Caddy (HTTPS) e serviço Linux com backup",
+    ],
+    technologies: [
+      "Python",
+      "FastAPI",
+      "SQLite",
+      "JavaScript",
+      "Caddy",
+      "Linux",
+    ],
+    category: "Web / Networking",
+    status: "in-development",
+  },
+
+  {
+    id: 3,
+    title: "AASIAM HUD",
+    description:
+      "App desktop de HUD para transmissões de campeonatos de CS2 da AASIAM. Recebe os dados da partida em tempo real e mostra placar, jogadores, radar, veto de mapas e patrocinadores na live, com um painel para o operador controlar tudo.",
+    highlights: [
+      "Dados ao vivo pelo Game State Integration do CS2, enviados aos overlays por Server-Sent Events",
+      "Estatísticas por mapa a partir das demos, exportadas em CSV",
+      "Painel de controle, manual do operador e sistema de licença",
+      "Instalador com atualização automática pelas releases do GitHub",
+      "Usado na transmissão do 2º Campeonato de CS2 da AASIAM",
+    ],
+    technologies: [
+      "Electron",
+      "Node.js",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "SSE",
+    ],
+    category: "Desktop / Streaming",
+    status: "completed",
+    github: "https://github.com/Riyck/Overlay-CS2-da-AASIAM",
+    demo: "https://github.com/Riyck/Overlay-CS2-da-AASIAM/releases/latest",
+  },
+
+  {
+    id: 4,
     title: "INFOTECH Banner System",
     description:
       "Sistema web desenvolvido para automatizar a geração de banners de cobrança, permitindo o preenchimento de informações específicas de cada cliente e a geração da imagem final.",
@@ -28,23 +103,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 2,
-    title: "AI Fitness",
-    description:
-      "Aplicação mobile com assistente de inteligência artificial voltado para orientação de treinos, utilizando comunicação entre aplicativo mobile, backend e API de inteligência artificial.",
-    technologies: [
-      "React Native",
-      "Expo",
-      "TypeScript",
-      "Node.js",
-      "OpenAI API",
-    ],
-    category: "Mobile / AI",
-    status: "in-development",
-  },
-
-  {
-    id: 3,
+    id: 5,
     title: "JP Síndico Profissional",
     description:
       "Aplicação mobile voltada para gerenciamento de atividades e tarefas relacionadas à administração de condomínios.",
@@ -59,7 +118,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 6,
     title: "Sistema de Estoque",
     description:
       "Sistema desenvolvido para gerenciamento de estoque, utilizando banco de dados relacional para armazenamento e consulta das informações.",

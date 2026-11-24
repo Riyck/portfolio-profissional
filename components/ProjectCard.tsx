@@ -27,9 +27,25 @@ export default function ProjectCard({
         </span>
       </div>
 
-      <p className="mt-5 flex-1 text-sm leading-relaxed text-zinc-400">
+      <p className="mt-5 text-sm leading-relaxed text-zinc-400">
         {project.description}
       </p>
+
+      {project.highlights && project.highlights.length > 0 && (
+        <ul className="mt-4 space-y-2">
+          {project.highlights.map((highlight) => (
+            <li
+              key={highlight}
+              className="flex gap-2 text-sm leading-relaxed text-zinc-400"
+            >
+              <span className="font-mono text-green-500">&gt;</span>
+              <span>{highlight}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div className="flex-1" />
 
       <div className="mt-6 flex flex-wrap gap-2">
         {project.technologies.map((technology) => (

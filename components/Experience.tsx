@@ -13,12 +13,12 @@ export default function Experience() {
         </p>
 
         <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-          Experiência & Liderança
+          Experiência & Formação
         </h2>
 
         <p className="mt-4 max-w-2xl text-zinc-400">
           Minha trajetória combina experiência prática em infraestrutura,
-          desenvolvimento de software e liderança em projetos acadêmicos.
+          desenvolvimento de software, formação acadêmica e liderança.
         </p>
       </div>
 

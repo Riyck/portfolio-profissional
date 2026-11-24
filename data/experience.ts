@@ -4,7 +4,15 @@ export interface Experience {
   company: string;
   description: string;
   tags: string[];
+  kind: "work" | "leadership" | "education" | "certification";
 }
+
+export const experienceKindLabel: Record<Experience["kind"], string> = {
+  work: "trabalho",
+  leadership: "liderança",
+  education: "formação",
+  certification: "certificação",
+};
 
 export const experiences: Experience[] = [
   {
@@ -12,13 +20,15 @@ export const experiences: Experience[] = [
     title: "Analista de Rede e Suporte Técnico",
     company: "INFOTECH Internet Provider",
     description:
-      "Atuação em infraestrutura de redes, configuração de ONUs, roteadores Intelbras, Mikrotik, switches, suporte remoto e manutenção da rede de clientes.",
+      "Atuação em infraestrutura de redes, configuração de ONUs, roteadores Intelbras, Mikrotik, switches, suporte remoto e manutenção da rede de clientes. Também desenvolvo ferramentas internas, como o gerador de banners de cobrança e o Infotech Analyser.",
     tags: [
       "Networking",
       "Infrastructure",
       "Mikrotik",
       "Support",
+      "Internal Tools",
     ],
+    kind: "work",
   },
 
   {
@@ -32,6 +42,7 @@ export const experiences: Experience[] = [
       "Community",
       "Organization",
     ],
+    kind: "leadership",
   },
 
   {
@@ -39,12 +50,39 @@ export const experiences: Experience[] = [
     title: "Sistemas de Informação",
     company: "Antonio Meneghetti Faculdade",
     description:
-      "Graduação com foco em desenvolvimento de software, banco de dados, redes de computadores, infraestrutura, segurança da informação e liderança.",
+      "Graduação com foco em desenvolvimento de software, banco de dados, redes de computadores, infraestrutura, segurança da informação e liderança. O TCC é baseado no app AI Fitness.",
     tags: [
       "Software",
       "SQL",
       "Networks",
       "Cybersecurity",
     ],
+    kind: "education",
+  },
+
+  {
+    year: "Em andamento",
+    title: "Análise e Desenvolvimento de Sistemas",
+    company: "UCS — Universidade de Caxias do Sul",
+    description:
+      "Segunda graduação, voltada ao desenvolvimento de software.",
+    tags: [
+      "Software",
+      "Development",
+    ],
+    kind: "education",
+  },
+
+  {
+    year: "Certificação",
+    title: "Foundations of Cybersecurity",
+    company: "Google",
+    description:
+      "Fundamentos de segurança da informação, gestão de riscos e boas práticas de proteção de sistemas.",
+    tags: [
+      "Cybersecurity",
+      "Risk Management",
+    ],
+    kind: "certification",
   },
 ];

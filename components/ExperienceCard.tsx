@@ -1,4 +1,4 @@
-import { Experience } from "@/data/experience";
+import { Experience, experienceKindLabel } from "@/data/experience";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -14,9 +14,15 @@ export default function ExperienceCard({
 
       <div className="rounded-lg border border-green-500/10 bg-green-950/5 p-6 transition hover:border-green-500/30 hover:bg-green-950/10">
 
-        <p className="font-mono text-xs text-green-500">
-          {experience.year}
-        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="font-mono text-xs text-green-500">
+            {experience.year}
+          </p>
+
+          <span className="rounded border border-green-500/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-green-500/70">
+            {experienceKindLabel[experience.kind]}
+          </span>
+        </div>
 
         <h3 className="mt-2 text-xl font-bold text-white">
           {experience.title}

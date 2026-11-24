@@ -1,7 +1,7 @@
 export interface Skill {
   name: string;
   category: string;
-  level: "learning" | "Basic" | "intermediate" | "advanced";
+  level: "learning" | "basic" | "intermediate" | "advanced";
 }
 
 export const skills: Skill[] = [
@@ -13,37 +13,62 @@ export const skills: Skill[] = [
   {
     name: "TypeScript",
     category: "Development",
-    level: "learning",
+    level: "intermediate",
   },
   {
     name: "JavaScript",
     category: "Development",
-    level: "learning",
+    level: "intermediate",
+  },
+  {
+    name: "React Native / Expo",
+    category: "Mobile",
+    level: "intermediate",
   },
   {
     name: "React",
     category: "Development",
-    level: "learning",
+    level: "basic",
   },
   {
     name: "Next.js",
     category: "Development",
-    level: "learning",
+    level: "basic",
   },
   {
     name: "Node.js",
     category: "Backend",
-    level: "learning",
+    level: "intermediate",
+  },
+  {
+    name: "FastAPI / Flask",
+    category: "Backend",
+    level: "basic",
+  },
+  {
+    name: "Supabase",
+    category: "Backend",
+    level: "intermediate",
   },
   {
     name: "SQL",
     category: "Database",
-    level: "learning",
+    level: "intermediate",
   },
   {
     name: "PostgreSQL",
     category: "Database",
-    level: "learning",
+    level: "intermediate",
+  },
+  {
+    name: "APIs de IA (OpenAI)",
+    category: "AI",
+    level: "intermediate",
+  },
+  {
+    name: "Git / GitHub",
+    category: "Tools",
+    level: "intermediate",
   },
   {
     name: "TCP/IP",
@@ -53,7 +78,7 @@ export const skills: Skill[] = [
   {
     name: "Mikrotik",
     category: "Networking",
-    level: "Basic",
+    level: "basic",
   },
   {
     name: "Wireshark",
@@ -68,6 +93,6 @@ export const skills: Skill[] = [
   {
     name: "Linux",
     category: "Infrastructure",
-    level: "learning",
+    level: "basic",
   },
 ];
