@@ -122,6 +122,13 @@ function TourBlock({ system, index }: { system: TourSystem; index: number }) {
             </a>
           ))}
         </div>
+
+        {system.note && (
+          <p className="mt-4 font-mono text-xs leading-relaxed text-zinc-500">
+            <span className="text-green-500/70">{"// "}</span>
+            {system.note}
+          </p>
+        )}
       </div>
     </article>
   );
@@ -141,8 +148,8 @@ export default function Tour() {
         </h2>
 
         <p className="mt-4 max-w-2xl text-zinc-400">
-          Um passeio rápido pelas telas dos dois projetos que já estão em uso,
-          com link para abrir ou baixar cada um.
+          Um passeio rápido pelas telas dos projetos que já estão em uso, com
+          link para abrir ou baixar quando o sistema é público.
         </p>
       </div>
 

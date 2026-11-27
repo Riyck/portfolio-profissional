@@ -17,6 +17,8 @@ export interface TourSystem {
   name: string;
   tagline: string;
   summary: string;
+  /** Aviso curto abaixo dos links (ex.: sistema de cliente com acesso restrito) */
+  note?: string;
   slides: TourSlide[];
   links: TourLink[];
 }
@@ -57,6 +59,49 @@ export const tour: TourSystem[] = [
     links: [
       { label: "Abrir o AI Fitness", href: "https://ai-fitness.expo.app", primary: true },
     ],
+  },
+  {
+    id: "jp-sindico",
+    name: "JP Síndico Profissional",
+    tagline: "Web / Mobile",
+    summary:
+      "Painel web e app de campo para uma empresa de síndico profissional, em piloto com um cliente real. Organiza prédios, ordens de serviço, rotas de visita, estoque e vencimentos num lugar só.",
+    note: "Sistema em uso por um cliente, com acesso restrito. As telas usam dados fictícios.",
+    slides: [
+      {
+        src: "/images/tour/jp-sindico-painel.webp",
+        width: 1600,
+        height: 1000,
+        title: "Painel do dia",
+        caption:
+          "OS em aberto, o que está agendado para hoje, o que precisa de decisão, vencimentos próximos e estoque baixo.",
+      },
+      {
+        src: "/images/tour/jp-sindico-rotas.webp",
+        width: 1600,
+        height: 1000,
+        title: "Rotas da equipe",
+        caption:
+          "A rota de visitas de cada membro no mapa, com a ordem das paradas, as chaves para levar e as OS de cada prédio.",
+      },
+      {
+        src: "/images/tour/jp-sindico-os.webp",
+        width: 1600,
+        height: 1000,
+        title: "Ordem de serviço",
+        caption:
+          "Quem executa (equipe ou prestador), orçamentos, custos, fotos e a linha do tempo de cada chamado.",
+      },
+      {
+        src: "/images/tour/jp-sindico-vencimentos.webp",
+        width: 1600,
+        height: 1000,
+        title: "Vencimentos",
+        caption:
+          "AGO, seguro, extintores, limpezas e PPCI de cada prédio, com destaque para o que venceu ou vence em 30 dias.",
+      },
+    ],
+    links: [],
   },
   {
     id: "aasiam-hud",
